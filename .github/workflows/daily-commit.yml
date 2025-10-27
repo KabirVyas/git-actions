@@ -2,6 +2,7 @@ name: Daily Commit Workflow - 22f2001048@ds.study.iitm.ac.in
 
 # Schedule: run daily at 02:30 UTC (adjust as needed)
 on:
+  workflow_dispatch:
   schedule:
     - cron: '30 2 * * *'
 
@@ -28,3 +29,4 @@ jobs:
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
